@@ -1,0 +1,15 @@
+void countwords(const string& filename){// Function to count words in a file
+    ifstream file(filename);
+    if (!file.is_open()){ // Check if file is opened successfully
+        cout << "Error opening file!" << endl;
+        return;
+    }
+    int wordCount = 0; // Variable to store word count
+    string word;
+    while (file >> word){ // Read words from file
+        wordCount++;
+    }
+    cout << "Total words: " << wordCount << endl;
+    file.close(); // Close the file
+
+}
