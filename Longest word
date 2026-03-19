@@ -1,0 +1,16 @@
+void find_longest_word(const string& filename){ // Function to find the longest word in a file
+    ifstream file(filename);
+    if (!file.is_open()){     //    Check if file is opened successfully
+        cout << "Error opening file!" << endl;
+        return;
+    }
+    string longestWord = "";
+    string word;    
+    while (file >> word){ 
+        if (word.length() > longestWord.length()){ // Update longest word if current word is longer
+            longestWord = word;
+        }
+    }
+    cout << "Longest word: " << longestWord << endl;
+    file.close();
+}
