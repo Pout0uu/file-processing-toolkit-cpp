@@ -1,0 +1,43 @@
+int main(){
+int choice; // Variable to store user choice
+cout << "1. Count words\n";
+cout << "2. Reverse words\n";
+cout << "3. Find longest word\n";
+cout << "4. Search word\n";
+
+cout << "Choice: ";
+
+cin >> choice; // Get user choice
+
+cout << "Enter filename: "; // Prompt user for filename
+string filename;
+
+cin >> filename;//  Get filename from user
+
+if (choice == 1){ // If user chooses to count words
+    countwords(filename);
+
+} else if (choice == 2){ // If user chooses to reverse words
+
+    reverse_words(filename); 
+} else if (choice == 3){ // If user chooses to find longest word
+
+    find_longest_word(filename);
+
+} else if (choice == 4){// If user chooses to search for a word
+
+    cout << "Enter word to search: ";
+    string wordToSearch;    
+    cin >> wordToSearch;
+    search_word(filename, wordToSearch);
+
+
+    
+} else {
+    cout << "Invalid choice!" << endl;
+}
+cout << "\nPress Enter to exit...";
+cin.ignore(); // Ignore the newline character left in the input buffer
+cin.get(); // Wait for user input before closing
+
+return 0;}
