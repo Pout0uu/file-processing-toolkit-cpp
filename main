@@ -1,3 +1,21 @@
+#include<iostream>
+#include<vector>
+#include<fstream>
+#include<string>
+
+
+using namespace std;
+
+
+
+// all the remaining code
+
+
+
+
+
+
+
 int main(){
 int choice; // Variable to store user choice
 cout << "1. Count words\n";
