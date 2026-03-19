@@ -1,0 +1,21 @@
+void search_word(const string& filename, const string& wordToSearch){ // Function to search for a word in a file
+    ifstream file(filename);
+    if (!file.is_open()){
+        cout << "Error opening file!" << endl;
+        return;
+    }   
+    string word;
+    bool found = false; // Variable to track if word is found
+    while (file >> word){
+        if (word == wordToSearch){ // If word is found, set found to true and break the loop
+            found = true;
+            break;
+        }
+    }
+    if (found){
+        cout << "Word found: " << wordToSearch << endl;
+    } else {
+        cout << "Word not found: " << wordToSearch << endl;
+    }
+    file.close();
+}
